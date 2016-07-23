@@ -164,6 +164,18 @@
                         <a href="{{ URL::to('submit')}}">Add New Site</a>
                     </li>
                 @endif
+                
+                <li>
+                    <a href="#">Latest Submissions</a>
+                </li>
+
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
 
                 @if(Auth::check())
                 <li>
@@ -175,6 +187,21 @@
                 </li>
                 @endif
                
+                <li>
+                    ______________________
+                </li>
+                <li>
+                    <form role="search">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                        <button type="submit" style="margin-left:45px;" class="btn btn-default">Submit</button>
+                    </form>
+                </li>
+                
+                <li>
+                    Made by Flimsy
+                </li>
 
           </ul>
       </div>
@@ -187,9 +214,6 @@
     
       </div>
       <!-- /#page-content-wrapper -->
-        <footer>
-                Made by Flimsy
-        </footer>
   </div>
   <!-- /#wrapper -->
 

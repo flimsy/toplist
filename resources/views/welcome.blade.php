@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="container" style="padding-top:70px;">
+<style>
+.container {
+   padding-top: 25px;
+   margin-left: -40px;
+}
+</style>
+ <div class="container">
             <div class="box">
                 <div class="text-center">
                     <h1>TopList</h1>
@@ -33,11 +39,13 @@
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div class="text-center">
-                                    <h3>{{ $entry-> entry_name}}</h3>
+                                    <h3><a href="{{$entry->entry_url}}">{{ $entry-> entry_name}}</a></h3>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-10">
-                                        <img style="-webkit-user-select: none" width="900px" height="150px" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=350%C3%97150&amp;w=700&amp;h=100">
+                                    <a href="{{$entry->entry_url}}">
+                                        <img style="-webkit-user-select: none" width="900px" height="100px" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=900%C3%97100&amp;w=900&amp;h=100">
+                                    </a>
                                     </div>
                                     <div class="col-xs-1">
                                         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left" aria-describedby="tooltip947652"> <img style="vertical-align:middle; max-height:48px;" src="{{ URL::asset('green_arrow_up.png') }}">

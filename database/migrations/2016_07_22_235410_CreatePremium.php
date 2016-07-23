@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEntry extends Migration
+class CreatePremium extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,13 @@ class CreateEntry extends Migration
      */
     public function up()
     {
-        Schema::create('entry', function(Blueprint $table){
+        Schema::create('premium', function(Blueprint $table){
             $table->increments('id');
             $table->integer('user_id');
             $table->mediumText('description');  
             $table->string('entry_name'); 
             $table->string('entry_url');
             $table->string('image_url');
-            $table->integer('votes');
             $table->string('Game');
         });
     }
@@ -31,6 +30,6 @@ class CreateEntry extends Migration
      */
     public function down()
     {
-        Schema::drop('entry');
+            Schema::drop('premium');
     }
 }
